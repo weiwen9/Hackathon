@@ -27,6 +27,7 @@ Original Document: https://docs.google.com/document/d/1VFkuWWMzuwPilHXJNvyPPfiC6
 - Login Page
 - Signup Page
 - Main Page
+- Gramification Page
 - “Contact Us” page
 
 ### Elements in Main Page:
