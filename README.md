@@ -13,13 +13,25 @@ Original Document: https://docs.google.com/document/d/1VFkuWWMzuwPilHXJNvyPPfiC6
 6. Remote consultation but for diet and exercise or is it too complex (Optional)
 7. Nearest clinics suggestion (Optional)
 
-### Possible Languages/ Frameworks to use:
-1. HTML
-2. CSS
-3. JavaScript
-4. Python
-5. Flask
-6. Jinja
-7. Bootstrap
-8. Tailwind
+### Possible Languages/ Frameworks/ Other tools:
+- HTML
+- CSS
+- JavaScript
+- Python
+- Flask
+- Jinja
+- Bootstrap
 
+### Webpages:
+- Login Page
+- Signup Page
+- Main Page
+- “Contact Us” page
+
+### Elements in Main Page:
+- Website name
+- Company name
+- Welcome page for users
+- Daily height & weight inputs
+- Exercises people want to do/ have done
+- Calendar of activities
