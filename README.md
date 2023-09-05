@@ -5,7 +5,7 @@ Original Document: https://docs.google.com/document/d/1VFkuWWMzuwPilHXJNvyPPfiC6
 > How might we leverage technology to encourage and promote healthy living?
 
 ### Web App Functionalities:
-1. Take in clients’ diet & exercises
+1. Take in clients’ exercises
 2. Provide suggestions to improve
 3. Channels for people in different sports communities
 4. Track their height and weight (to calculate bmi) if bmi improves, give vouchers etc...
