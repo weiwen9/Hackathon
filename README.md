@@ -36,3 +36,10 @@ Original Document: https://docs.google.com/document/d/1VFkuWWMzuwPilHXJNvyPPfiC6
 - Daily height & weight inputs
 - Exercises people want to do/ have done
 - Calendar of activities
+
+### Telegram Channels Links
+- Swim Group: https://t.me/+6VZRHt1QCX05YzQ1
+- Basketball Besties: https://t.me/+kkhIJ-V-s2VhZTE9
+- Football Fanatics: https://t.me/+b4NWTYUQjadjNDBl
+- Cycling Buddies: https://t.me/+NXXVQimtIb0yYzk1
+- Gym: https://t.me/+IPO49mhUvE0wMDNl
