@@ -1,8 +1,13 @@
 from flask import Flask, render_template, request, redirect, url_for
+import cryptography as cryptool
+import hashlib
 
 app = Flask(__name__)
 
-# A simple user database (in-memory for this example)
+hash_object = hashlib.sha256() # Hash function
+
+
+# LOG IN FUNCTION
 users = {
     'john': 'password123',
     'jane': 'securepass',
@@ -23,5 +28,35 @@ def login():
 
     return render_template('login.html')
 
+
+
+# SIGN UP FUNCTION
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+
+        if username in users:
+            return render_template('signup.html', error='Username already exists')
+        
+        pass_bytes_data = password.encode('utf-8')
+        # Store the user information in the database (in-memory for this example)
+
+        # Update the hash object with your data
+        #   # Convert your data to bytes if it's not already
+        hash_object.update(pass_bytes_data)
+        
+        # Get the hexadecimal representation of the hash
+        encrypted_password = hash_object.hexdigest()
+
+        users[username] = encrypted_password
+
+        return render_template('login.html')
+
+    return render_template('signup.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
+
+

@@ -9,9 +9,12 @@
 <body>
     <div class="signin-wrapper">
         <div class="sign-panels">
-            <div class="signup">
+            <div class="left-side">
+                <img src="../static/media/logoblack.png">
+            </div>
+            <div class="right-side"> <!--used to be class:signup-->  
                 <div class="signin-title">
-                    <span>Sign Up</span>
+                    <span>SIGN UP</span>
                     <p>Create a new account.</p>
                 </div>
 
@@ -21,7 +24,11 @@
                         <label style="padding-left:30px;" for="floatingUsername">Username</label>
                         {{ form.name }}
                     </div>
-
+                    <div class="input">
+                        <input type="email" name="username" id="username" placeholder="Email Address"><br>
+                        <input type="password" name="password" id="password" placeholder="Password" required><br>
+                        <input type="password" name="password" id="password" placeholder="Repeat Password" required><br>
+                    </div>
                     {% if form.name.errors %}
                         {% for error in form.name.errors %}
                             <span>{{ error }}</span>
