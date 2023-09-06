@@ -43,3 +43,4 @@ Original Document: https://docs.google.com/document/d/1VFkuWWMzuwPilHXJNvyPPfiC6
 - Football Fanatics: https://t.me/+b4NWTYUQjadjNDBl
 - Cycling Buddies: https://t.me/+NXXVQimtIb0yYzk1
 - Gym: https://t.me/+IPO49mhUvE0wMDNl
+- Calisthenics Comrades: https://t.me/+tmGVNWjAjls3MDA1
