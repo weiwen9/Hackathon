@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="/application/static/css/form.css">
+    <title>Log In</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/form.css">
 </head>
 <body>
     <div class="signin-wrapper">
@@ -14,7 +15,7 @@
                     <p>Welcome back, please login to your account</p>
                 </div>
 
-                <form method='POST' action=''>
+                <form method="post" action="">
                     {{ form.csrf_token }}
                     <div class="form-floating mb-3">
                         <label style="padding-left:30px;" for="floatingInput">Email address</label>

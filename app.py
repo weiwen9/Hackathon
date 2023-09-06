@@ -1,6 +1,2 @@
-from application import create_app
-
-app = create_app()
-
-if __name__ == "__main__":
-    app.run(port=5000, debug=True)
+# I'll do most of the work here
+# If this file gets too long, I'll use other files to make our code cleaner
