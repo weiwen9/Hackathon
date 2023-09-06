@@ -19,6 +19,10 @@
     border-radius: 20px;
     text-align: center;
 }
+.left-side {
+    float:left;
+}
+
 
 .login, .signup {
     position: relative;
