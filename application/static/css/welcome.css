@@ -1,4 +1,24 @@
-h1 {
-    color: white;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+@font-face {
+    font-family: "Univers";
+    src: url(/application/static/fonts/Univers\ Condensed\ Regular.ttf)
 }
+li {
+    display: inline-block;
+    text-align: right;
+}
+ul li a {
+    font-family: 'Univers';
+}
+#video_background {
+}
+
+img {
+    margin:auto;
+    height:700px;
+}
+button {
+    font-family: 'Univers';
+    background-color: rgb(15, 15, 37);
+}
+
+
