@@ -1,6 +1,9 @@
 @font-face {
     font-family: 'Univers';
-    src: url(..\fonts\Univers.ttf) format('truetype');
+    src: url(../fonts/Helvetica\ Neue\ 67\ Medium\ Condensed.otf) format('truetype');
+}
+* {
+    font-family: 'Univers';
 }
 body {
     overflow: hidden;
@@ -17,9 +20,9 @@ li {
     margin-top: 1vh;
 }
 ul li a {
-    font-family: 'Univers';
     color: white;
     text-decoration: none;
+    font-size: 21px;
 }
 #video_background {
     position: absolute;
@@ -51,7 +54,6 @@ img {
     bottom:70%
 }
 button {
-    font-family: 'Univers';
     background-color: rgb(15, 15, 37);
     border-radius: 10px;
     border:1px;
@@ -60,12 +62,15 @@ button {
     text-align: center;
 }
 button a {
-    font-family: 'Univers';
-    color:white;
-    font-size: 15px;
+    color:rgb(240, 240, 240);
+    font-size: 20px;
+    text-decoration: none;
 }
 button:hover {
     background-color: rgb(36, 36, 71);
+}
+button a:hover {
+    color: white;
 }
 
 
