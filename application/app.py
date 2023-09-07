@@ -59,7 +59,7 @@ def index():
     return render_template("index.html")
 
 
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/login.html', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
     if request.method == 'POST':
@@ -78,12 +78,12 @@ def login():
     return render_template("login.html", form=form)
 
 
-@app.route('/home')
+@app.route('/home.html')
 def home():
     return render_template("home.html")
 
 
-@app.route('/signup', methods=['GET', 'POST'])
+@app.route('/signup.html', methods=['GET', 'POST'])
 def signup():
     form = SignupForm()
     
