@@ -6,6 +6,17 @@ const video_database = [
     }
 ]
 
+// Listen for the "keydown" event on the input field
+searchInput.addEventListener("keydown", function(event) {
+    // Check if the pressed key is Enter
+    if (event.key === "Enter" || event.keyCode === 13) {
+        // Execute your code here
+        const searchTerm = searchInput.value.toLowerCase();
+        searchvideos(searchTerm);
+    }
+});
+
+
 // Event listener for search input
 const searchInput = document.getElementById("searchInput");
 searchInput.addEventListener("input", () => {
@@ -20,7 +31,7 @@ function searchvideos(searchTerm) {
     video_database.forEach(video => {
         // Check if the video's tags match the search term
         if (video.tags.includes(searchTerm)) {
-            
+
             videoplacer.innerHTML = `
             <video id="video_background" loop muted autoplay>
                 <source src="` + video_database + `">

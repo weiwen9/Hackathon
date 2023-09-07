@@ -98,9 +98,22 @@ input {
 #videoplacer {
     text-align: center;
 }
+.video {
+    margin-top: 400px;
+    border: black solid 1px;
+    width: 70vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+.textdiv { 
+    border:black solid 1px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
 
 #videoplacer video{
-    margin-top: 500px;
-    height: 500px;
-
+    height:500px;
 }
