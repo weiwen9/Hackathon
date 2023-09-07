@@ -22,8 +22,7 @@
                 <form method="post" action="">
                     {{ form.csrf_token }}
                     <div class="form-floating">
-                        <label for="floatingUsername">Username</label>
-                        {{ form.username }}
+                        {{ form.username (placeholder="Username") }}
                     </div>
 
                     {% if form.username.errors %}
@@ -33,8 +32,7 @@
                     {% endif %}
 
                     <div class="form-floating">
-                        <label for="floatingEmail">Email</label>
-                        {{ form.email }}
+                        {{ form.email (placeholder="Email")}}
                     </div>
 
                     {% if form.email.errors %}
@@ -44,8 +42,7 @@
                     {% endif %}
 
                     <div class="form-floating">
-                        <label for="floatingPassword">Password</label>
-                        {{ form.password }}
+                        {{ form.password (placeholder="Password")}}
                     </div>
 
                     {% if form.password.errors %}
@@ -55,8 +52,7 @@
                     {% endif %}
 
                     <div class="form-floating">
-                        <label for="floatingRPassword">Repeat Password</label>
-                        {{ form.password2 }}
+                        {{ form.password2 (placeholder="Password")}}
                     </div>
 
                     {% if form.password2.errors %}

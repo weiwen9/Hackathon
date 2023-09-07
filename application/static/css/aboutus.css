@@ -12,11 +12,13 @@ span {
 }
 
 * {
+    margin:0px;
     font-family: 'Helvetica Neue';
 }
 
 html {
     background-color: white;
+    text-align: center;
 }
   
 form {
@@ -32,7 +34,7 @@ form {
 
 #details {
     margin-bottom: 5px;
-    position: relative;
+    position: relative; right: 135px;
 }
   
 #details3 {
@@ -72,7 +74,7 @@ form {
     height: 40px;
     width: 80px;
     font: bold 13px Helvetica;
-    position: relative; top: 70px; 
+    position: relative; top: 20px;
 }
 
 h3 {

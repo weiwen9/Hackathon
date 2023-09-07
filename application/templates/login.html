@@ -22,19 +22,17 @@
                 <form method="post" action="">
                     {{ form.csrf_token }}
                     <div class="form-floating mb-3">
-                        {{ form.username.label }}
-                        {{ form.username }}
+                        {{ form.email (placeholder="Email") }}
                     </div>
 
-                    {% if form.username.errors %}
-                        {% for error in form.username.errors %}
+                    {% if form.email.errors %}
+                        {% for error in form.email.errors %}
                             <span>{{ error }}</span>
                         {% endfor %}
                     {% endif %}
 
                     <div class="form-floating">
-                        {{ form.password.label }}
-                        {{ form.password }}
+                        {{ form.password (placeholder="Password") }}
                     </div>
 
                     {% if form.password.errors %}
