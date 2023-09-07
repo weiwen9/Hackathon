@@ -6,11 +6,10 @@ app = Flask(__name__)
 
 hash_object = hashlib.sha256() # Hash function
 
-
 # LOG IN FUNCTION
 users = {
-    'john': 'password123',
-    'jane': 'securepass',
+    'john': ['Password', 'John@email.com'],
+    'jane': ['Password', 'John@email.com'],
 }
 
 @app.route('/', methods=['GET', 'POST'])
@@ -35,24 +34,27 @@ def login():
 def signup():
     if request.method == 'POST':
         username = request.form['username']
+        email = request.form['email']
         password = request.form['password']
+        password2 = request.form['password2']
 
         if username in users:
             return render_template('signup.html', error='Username already exists')
         
-        pass_bytes_data = password.encode('utf-8')
-        # Store the user information in the database (in-memory for this example)
-
-        # Update the hash object with your data
-        #   # Convert your data to bytes if it's not already
+        pass_bytes_data = password.encode('utf-8') # Convert to bytes
         hash_object.update(pass_bytes_data)
-        
-        # Get the hexadecimal representation of the hash
-        encrypted_password = hash_object.hexdigest()
+        encrypted_password = hash_object.hexdigest() # Get the hexadecimal representation of the hash
+    
+        pass_bytes_data2 = password2.encode('utf-8') # Convert to bytes
+        hash_object.update(pass_bytes_data2)
+        encrypted_password2 = hash_object.hexdigest()
 
-        users[username] = encrypted_password
+        if encrypted_password != encrypted_password2:
+            return render_template('signup.html', error='Passwords do not match')
 
-        return render_template('login.html')
+        users[username] = [encrypted_password, email]
+        print(username,": Encrypted[",encrypted_password,']') # FOR DEBUGGING TO BE REMOVED LATER
+        return render_template('login.html', success='Your account has been created')
 
     return render_template('signup.html')
 
