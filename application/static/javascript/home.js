@@ -1,8 +1,8 @@
 const video_database = [
     {
-        title: 'Video 1',
-        tags: ['tag1','tag2'],
-        url:''
+        title: 'Calisthenics for Beginners',
+        tags: ['calisthenics','core','hybrid calisthenics'],
+        url:'..\static\media\video_database\Calisthenics for Beginners (2023).mp4.crdownload'
     }
 ]
 
