@@ -1,0 +1,100 @@
+html {
+    background-color: #e7decc;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+  }
+  
+  .topnav {
+      background-color: #c5a591;
+      overflow: hidden;
+      border-radius: 20px;
+      width: fit-content;
+  }
+    
+    /* Style the links inside the navigation bar */
+  .topnav a {
+      float: left;
+      color: #f2f2f2;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+  }
+    
+    /* Change the color of links on hover */
+  .topnav a:hover {
+      background-color: #bd9881;
+  }
+    
+    /* Add a color to the active/current link */
+  .topnav a.active {
+      background-color: #6b4b38;
+      color: white;
+  }
+  
+  #logo {
+      text-align: left;
+      font-family: "Lucida Handwriting", cursive;
+  }
+  
+  span {
+    color: red;
+  }
+  
+  a {
+    color: saddlebrown;
+  }
+  
+  #details {
+    margin-bottom: 5px;
+    position: relative; right: 170px;
+  }
+  
+  #details3 {
+    margin-bottom: 5px;
+    position: relative; right: 88px; bottom: 37px;
+  }
+  
+  #fname {
+    margin-right: 25px;
+    padding: 8px;
+  }
+  
+  #fn {
+    position: relative; bottom: 15px; right: 163px;
+    font-size: small;
+  }
+  
+  #ln {
+    position: relative; bottom: 43px; left: 47px;
+    font-size: small;
+  }
+  
+  #lname {
+    padding: 8px;
+  }
+  
+  #email {
+    padding: 8px;
+    position: relative; bottom: 50px;
+  }
+  
+  #details2 {
+    position: relative; bottom: 40px; right: 170px;
+  }
+  
+  #qn-r {
+    margin-bottom: 15px;
+    padding: 8px;
+    position: relative; left: 4px; bottom: 37px;
+  }
+  
+  #submit {
+      background: saddlebrown;
+      color: white;
+      border-style: outset;
+      border-color: #bd9881;
+      height: 40px;
+      width: 80px;
+      font: bold 13px Georgia, 'Times New Roman', Times, serif;
+      position: relative; top: 10px;
+  }
