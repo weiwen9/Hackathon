@@ -46,7 +46,7 @@ class SignupForm(FlaskForm):
 # Define Login Form Model
 class LoginForm(FlaskForm):
     email = StringField("email", validators=[DataRequired()])
-    password = StringField("Password", validators=[DataRequired()])
+    password = PasswordField("Password", validators=[DataRequired()])
     submit = SubmitField("Sign In")
 
 
