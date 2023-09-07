@@ -1,26 +1,59 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
+from flask_wtf import FlaskForm
+from wtforms import StringField, PasswordField, SubmitField, ValidationError
+from wtforms.validators import DataRequired, Email, EqualTo, Length
 
-app = Flask(__name__)
-app.config['SECRET_KEY'] = 'your_secret_key_here'
+app = Flask(__name__, template_folder="templates")
+
+app.config['SECRET_KEY'] = '!1ONEone'
 DB_NAME = "DataBase.db"
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + DB_NAME
 
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 
-# User Model definition
+# Define User Model
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
     username = db.Column(db.String(80), unique=True, nullable=False)
     password = db.Column(db.String(200), nullable=False)
 
+
+# Define Signup Form
+class SignupForm(FlaskForm):
+    username = StringField('Username', validators=[DataRequired(), Length(min=4, max=20)])
+    email = StringField('Email', validators=[DataRequired(), Email()])
+    password = PasswordField('Password', validators=[DataRequired(), Length(min=6)])
+    password2 = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password')])
+    submit = SubmitField('Sign Up')
+
+    # To check whether username or email is already in use
+    def validate_username(self, field):
+        if User.query.filter_by(username=field.data).first():
+            flash("Username already exists!", "error")
+            raise ValidationError("Username already exists!")
+
+    def validate_email(self, field):
+        if User.query.filter_by(email=field.data).first():
+            flash("Email already exists!", "error")
+            raise ValidationError("Email already exists!")
+
+# Define Login Form Model
+class LoginForm(FlaskForm):
+    email = StringField("email", validators=[DataRequired()])
+    password = StringField("Password", validators=[DataRequired()])
+    submit = SubmitField("Sign In")
+
+
 # Create database tables
 with app.app_context():
     db.create_all()
 
+
+# Defining routes
 @app.route('/')
 def index():
     return render_template("index.html")
@@ -28,20 +61,21 @@ def index():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    form = LoginForm()
     if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
+        email = form.email.data
+        password = form.password.data
 
         # Authenticate user
-        user = User.query.filter_by(username=username).first()
+        user = User.query.filter_by(email=email).first()
         if user and bcrypt.check_password_hash(user.password, password):
-            # Redirect to the user's home page after successful login
+            # Redirect to home page if passwords match
             return redirect(url_for("home"))
         else:
-            # Flash an error message and render the login template
+            # Flash an error message and Render the login template
             flash("Invalid credentials. Please try again.", "error")
 
-    return render_template("login.html")
+    return render_template("login.html", form=form)
 
 
 @app.route('/home')
@@ -51,24 +85,15 @@ def home():
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
+    form = SignupForm()
+    
     if request.method == 'POST':
-        username = request.form['username']
-        email = request.form['email']
-        password = request.form['password']
-        password2 = request.form['password2']
+        # Check whether data provided are valid
+        if form.validate_on_submit():
+            username = form.username.data
+            email = form.email.data
+            password = form.password.data
 
-        # Check whether email or username already exists in the database
-        existing_user = User.query.filter_by(username=username).first()
-        existing_email = User.query.filter_by(email=email).first()
-
-        # Flash messages based on input
-        if existing_email:
-            flash("Email already exists!", "error")
-        elif existing_user:
-            flash("Username already exists!", "error")
-        elif password != password2:
-            flash("Passwords do not match!", "error")
-        else:
             # Hash password
             hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
 
@@ -80,9 +105,10 @@ def signup():
             # Flash successful sign-up message
             flash("Account successfully created!", "success")
 
-        return render_template('login.html')
+        return redirect(url_for('login'))
 
-    return render_template('signup.html')
+    return render_template('signup.html', form=form)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
