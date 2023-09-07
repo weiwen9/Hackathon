@@ -96,16 +96,22 @@ form {
     height: 40px;
     width: 80px;
     font: bold 13px Helvetica;
-    position: relative; top: 70px; left: 150px;
+    position: relative; 
+    top: 70px; 
+    left: 150px;
 }
 
 h3 {
-    position: relative; top: 70px; left: 150px;
+    position: relative; 
+    top: 70px; 
+    left: 150px;
 }
 
 #cu {
-    position: fixed; top: 140px;
-    width: 50%; left: 280px;
+    position:absolute; 
+    top: 140px;
+    width: 50%; 
+    left: 400px;
 }
 
 /* Navigation bar */
