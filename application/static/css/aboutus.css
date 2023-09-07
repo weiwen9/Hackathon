@@ -19,12 +19,12 @@ html {
   
 #details {
     margin-bottom: 5px;
-    position: relative; right: 170px;
+    position: relative; right: 135px;
 }
   
 #details3 {
     margin-bottom: 5px;
-    position: relative; right: 128px; bottom: 37px;
+    position: relative; right: 105px; top: 13px;
 }
   
 #fname {
@@ -38,17 +38,17 @@ html {
   
 #email {
     padding: 8px;
-    position: relative; bottom: 40px;
+    position: relative; top: 3px;
 }
   
 #details2 {
-    position: relative; bottom: 30px; right: 170px;
+    position: relative; bottom: 0px; right: 138px;
 }
   
 #qn {
     margin-bottom: 15px;
     padding: 8px;
-    position: relative; left: 3px; bottom: 37px;
+    position: relative; right: 3px; top: 13px;
 }
   
 #submit {
@@ -59,5 +59,5 @@ html {
     height: 40px;
     width: 80px;
     font: bold 13px Helvetica;
-    position: relative; bottom: 30px;
+    position: relative; top: 20px;
 }
