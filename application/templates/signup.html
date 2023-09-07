@@ -9,6 +9,8 @@
 </head>
 <body>
     <div class="signin-wrapper">
+        <div id="popup"></div>
+        <div id="bgimage"></div>
         <div class="sign-panels">
             <div class="left-side">
                 <img src="../static/media/logoblack.png">
@@ -52,7 +54,7 @@
                     {% endif %}
 
                     <div class="form-floating">
-                        {{ form.password2 (placeholder="Password")}}
+                        {{ form.password2 (placeholder="Repeat Password")}}
                     </div>
 
                     {% if form.password2.errors %}

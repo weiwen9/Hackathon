@@ -9,7 +9,10 @@
 * {
     box-sizing: border-box;
 }
-
+body {
+    background-image:url(../media/modern-abstract-background_200180-196.jpg);
+    background-size: cover;
+}
 .signin-wrapper {
     width: 1%;
     height: 100vh;
@@ -29,6 +32,21 @@
     display:flex;
     align-items: center;
 }
+#popup {
+    font-family: 'Univers';
+    color:rgb(247, 247, 247);
+    position: fixed;
+    display:block;
+    margin:10px;
+    right:30%;
+    top:20px;
+    width: 40vw;
+    background-color: rgb(190, 1, 1);
+    padding:10px;
+    text-align: center;
+  }
+
+
 img {
     display: inline-block;
 }
@@ -53,7 +71,7 @@ img {
 
 
 .signin-title {
-    color: #9f9f9f;
+    color: #111111;
 }
 
     .signin-title span {
@@ -64,13 +82,14 @@ img {
     }
 
     .signin-title p {
+        font-family: 'Univers';
         font-size: 20px;
-        font-weight: 500;
+        font-weight: 800;
     }
 .input {
     margin:auto;
 }
-#username, #password {
+#username, #email, #password, #password2 {
     text-align: left;
     padding:5px;
     padding-left: 10px;
@@ -221,6 +240,7 @@ img {
     border: none;
     box-shadow: none;
     cursor: pointer;
+    font-family: 'Univers';
 }
 
     .btn-signin:hover,
@@ -244,6 +264,7 @@ img {
     border: none;
     box-shadow: none;
     cursor: pointer;
+    font-family: 'Univers';
 }
 
     .btn-signup:hover,
@@ -259,6 +280,8 @@ img {
     display: block;
     margin: 30px auto 0;
     text-decoration: none;
+    font-family: 'Univers';
+    font-weight: bold;
 }
 
 .btn-member {

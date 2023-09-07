@@ -4,6 +4,8 @@ from flask_bcrypt import Bcrypt
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, ValidationError
 from wtforms.validators import DataRequired, Email, EqualTo, Length
+import time
+
 
 app = Flask(__name__, template_folder="templates")
 
@@ -44,7 +46,7 @@ class SignupForm(FlaskForm):
 # Define Login Form Model
 class LoginForm(FlaskForm):
     email = StringField("email", validators=[DataRequired()])
-    password = StringField("Password", validators=[DataRequired()])
+    password = PasswordField("Password", validators=[DataRequired()])
     submit = SubmitField("Sign In")
 
 
@@ -73,7 +75,7 @@ def login():
             return redirect(url_for("home"))
         else:
             # Flash an error message and Render the login template
-            flash("Invalid credentials. Please try again.", "error")
+            wrong_password = True
 
     return render_template("/login.html", form=form)
 
