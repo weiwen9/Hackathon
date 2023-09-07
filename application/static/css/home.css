@@ -26,6 +26,7 @@ nav {
     width: 100%;
     align-items: center;
     justify-content: center;
+    z-index:1 ;
 }
 nav a {
     align-items: center;
