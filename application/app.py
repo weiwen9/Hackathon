@@ -58,6 +58,8 @@ with app.app_context():
 # Defining routes
 @app.route('/')
 def index():
+    global authentication
+    authentication = False
     return render_template("index.html")
 
 
@@ -67,21 +69,28 @@ def login():
     if request.method == 'POST':
         email = form.email.data
         password = form.password.data
+        global authentication
+        authentication = False
 
         # Authenticate user
         user = User.query.filter_by(email=email).first()
         if user and bcrypt.check_password_hash(user.password, password):
             # Redirect to home page if passwords match
+            authentication = True
             return redirect(url_for("home"))
+
         else:
+            flash('Your email or password is incorrect', 'error')
             # Flash an error message and Render the login template
-            wrong_password = True
+            return render_template("/login.html", form=form)
 
     return render_template("/login.html", form=form)
 
 
 @app.route('/home.html')
 def home():
+    if authentication == False:
+            return redirect(url_for("login"))
     return render_template("home.html")
 
 
@@ -105,7 +114,6 @@ def signup():
             db.session.commit()
 
             # Flash successful sign-up message
-            flash("Account successfully created!", "success")
 
         return redirect(url_for('login'))
 
