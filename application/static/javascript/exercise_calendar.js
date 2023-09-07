@@ -1,33 +1,21 @@
-const calendarGrid = document.getElementById('calendarGrid');
-const addEventBtn = document.getElementById('addEventBtn');
-const eventModal = document.getElementById('eventModal');
-const saveEventBtn = document.getElementById('saveEventBtn');
-const eventNameInput = document.getElementById('eventName');
-const eventDateInput = document.getElementById('eventDate');
-const closeBtn = document.querySelector('.close');
+const currentDate = document.querySelector(".current-date"),
+daysTag = document.querySelector(".days");
 
-addEventBtn.addEventListener('click', () => {
-    eventModal.style.display = 'block';
-});
+let date = new Date(),
+currYear = date.getFullYear(),
+currMonth = date.getMonth();
 
-closeBtn.addEventListener('click', () => {
-    eventModal.style.display = 'none';
-});
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-saveEventBtn.addEventListener('click', () => {
-    const eventName = eventNameInput.value;
-    const eventDate = eventDateInput.value;
+const renderCalender = () => {
+    let lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate();
+    let liTag = "";
 
-    if (eventName && eventDate) {
-        const event = document.createElement('div');
-        event.className = 'day';
-        event.textContent = eventName;
-        event.title = eventDate;
-        calendarGrid.appendChild(event);
-        eventNameInput.value = '';
-        eventDateInput.value = '';
-        eventModal.style.display = 'none';
-    } else {
-        alert('Please fill in all fields.');
+    for (let i=1; i<=lastDateofMonth; i++) {
+        liTag += `<li>${i}</li>`;
     }
-});
+
+    currentDate.innerText= `${months[currMonth]} ${currYear}`;
+    daysTag.innerHTML = liTag;
+}
+renderCalender();

@@ -75,7 +75,7 @@ def login():
             # Flash an error message and Render the login template
             flash("Invalid credentials. Please try again.", "error")
 
-    return render_template("login.html", form=form)
+    return render_template("/login.html", form=form)
 
 
 @app.route('/home.html')
