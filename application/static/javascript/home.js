@@ -20,7 +20,12 @@ function searchvideos(searchTerm) {
     video_database.forEach(video => {
         // Check if the video's tags match the search term
         if (video.tags.includes(searchTerm)) {
-            videoplacer.innerHTML = ''
+            
+            videoplacer.innerHTML = `
+            <video id="video_background" loop muted autoplay>
+                <source src="` + video_database + `">
+            </video>
+            `
         }
         else {
             videoplacer.innerHTML = "<h1>No videos found with the search term.</h1>"

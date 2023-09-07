@@ -70,3 +70,22 @@ nav a /* Photo: Maison De Guzman */{
 nav ul li a:hover:after {
     width: 100%;
 }
+/* Styling inputs*/
+input {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    margin-left: 20px;
+    padding:10px;
+    padding-left: 15px;
+    border-radius: 20px;
+    width:240px;
+    border:gray 1px solid;
+}
+
+
+/* Styling video */
+#videoplacer video{
+    height: 500px;
+
+}
