@@ -1,12 +1,20 @@
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url(../fonts/Helvetica\ Neue\ 67\ Medium\ Condensed.otf) format('truetype');
+}
+@font-face {
+    font-family: 'Univers';
+    src: url(../fonts/UniversLightCondensed.ttf);
+}
+
+* {
+    margin:0px;
+    font-family: 'Helvetica Neue';
+}
+
 html {
-    background-color: #3d3935;
-    color: white;
-    font-family: Helvetica;
+    background-color: white;
     text-align: center;
-  }
-  
-span {
-    color: red;
 }
   
 #details {
