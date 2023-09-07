@@ -79,3 +79,17 @@ nav ul li a {
 nav ul li a:hover:after {
     width: 100%;
 }
+
+input {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 23px;
+    margin-right: 20px;
+    padding:10px;
+    padding-left: 15px;
+    border-radius: 20px;
+    width:240px;
+    border:gray 0.5px solid;
+    background-color: #ececec;
+    margin-top: 20px;
+}
