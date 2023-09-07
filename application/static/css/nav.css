@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url(../fonts/Helvetica\ Neue\ 67\ Medium\ Condensed.otf) format('truetype');
+}
+@font-face {
+    font-family: 'Univers';
+    src: url(../fonts/UniversLightCondensed.ttf);
+}
+
+* {
+    margin:0px;
+    font-family: 'Helvetica Neue';
+}
+
+/* Navigation bar */
+nav {
+    background-color: #fbfbfb;
+    padding:10px;
+    text-align: center;
+    border:rgb(197, 197, 197) 1px solid;
+    box-shadow: 1px 2px 5px 2px #f0f0f0;
+    position:fixed;
+    display:flex;
+    padding-bottom: 20px;
+    top: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+nav a {
+    align-items: center;
+    display:inline-block;
+}
+
+nav ul {
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    display:flex;
+    margin-top: 10px;
+}
+nav ul li {
+    display:inline-block;
+    border: 1px rgb(0, 0, 0);
+    margin: 10px;
+    align-items: center;
+}
+nav ul li a {
+    position: relative;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size:20px;
+}
