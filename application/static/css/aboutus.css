@@ -24,27 +24,17 @@ span {
     padding: 8px;
 }
   
-#fn {
-    position: relative; bottom: 15px; right: 163px;
-    font-size: small;
-}
-  
-#ln {
-    position: relative; bottom: 43px; left: 47px;
-    font-size: small;
-}
-  
 #lname {
     padding: 8px;
 }
   
 #email {
     padding: 8px;
-    position: relative; bottom: 50px;
+    position: relative; bottom: 40px;
 }
   
 #details2 {
-    position: relative; bottom: 40px; right: 170px;
+    position: relative; bottom: 30px; right: 170px;
 }
   
 #qn {
