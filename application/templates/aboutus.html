@@ -7,44 +7,29 @@
     <link rel="icon" href="../static/media/webicon.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../static/css/aboutus.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="../static/css/nav.css">
 </head>
 <body>
-    <div>
-        <nav>
-            <a href="home.html"><img id="logo" src="../static/media/logoblack.png"></a>
-            <ul>
-                <li id="samepage" class="NormalNav"><a>HOME</a></li>
-                <li class="NormalNav"><a href="aboutus.html">ABOUT H</a></li>
-                <li class="NormalNav"><a href="exercise_calendar.html">EXERCISE CALENDAR</a></li>
-                <li class="NormalNav"><a href="profile.html">PROFILE</a></li>
-            </ul>
-            <input type="text" id="searchinput" placeholder="Search for videos">
-        </nav>
-    </div>
-    <div>
-        <h3>About H</h3>
-        <p>
-            Introducing our innovative web app dedicated to fostering a healthier lifestyle through the power of technology. Welcome to a platform designed to help you seamlessly track and enhance your exercise routine while connecting you with a vibrant community of like-minded individuals. Whether you're a fitness enthusiast looking to set and achieve new goals or simply seeking motivation and camaraderie on your wellness journey, our website is your ultimate companion. Join us today to embark on a path to improved well-being, one step, one workout, and one connection at a time. Embrace the future of healthy living with us!
-        </p>
+    <h3>About H</h3>
+    <p>
+        Introducing our innovative web app dedicated to fostering a healthier lifestyle through the power of technology. Welcome to a platform designed to help you seamlessly track and enhance your exercise routine while connecting you with a vibrant community of like-minded individuals. Whether you're a fitness enthusiast looking to set and achieve new goals or simply seeking motivation and camaraderie on your wellness journey, our website is your ultimate companion. Join us today to embark on a path to improved well-being, one step, one workout, and one connection at a time. Embrace the future of healthy living with us!
+    </p>
+    <br>
+    <h3>Contact Us!</h3>
+    <form name="contact" method="post" action="https://formsubmit.co/weiwenn.tee@gmail.com"> 
+        <legend>Do drop your questions here!</legend>
+        <input type="hidden" name="_captcha" value="false">
+        <p id="details">Name<span>*</span></p>
+            <input id="fname" type="text" name="fname" placeholder="First name">
+            <input id="lname" type="text" name="lname" placeholder="Last name">
         <br>
-        <h3>Contact Us!</h3>
-        <form name="contact" method="post" action="https://formsubmit.co/weiwenn.tee@gmail.com"> 
-            <legend>Do drop your questions here!</legend>
-            <input type="hidden" name="_captcha" value="false">
-            <p id="details">Name<span>*</span></p>
-                <input id="fname" type="text" name="fname" placeholder="First name">
-                <input id="lname" type="text" name="lname" placeholder="Last name">
-            <br>
-            <p id="fn"></p> <p id="ln"></p>
-            <br>
-            <p id="details2">Email<span>*</span></p>
-                <input id="email" type="email" name="email" size="52px" required>
-            <p id="details3">Your Question(s)<span>*</span></p>
-                <textarea id="qn" name="qn" rows="5" cols="50" required></textarea>
-            <br>
-            <input id="submit" type="submit" name="submit">
-        </form>
-    </div>
+        <p id="fn"></p> <p id="ln"></p>
+        <br>
+        <p id="details2">Email<span>*</span></p>
+            <input id="email" type="email" name="email" size="52px" required>
+        <p id="details3">Your Question(s)<span>*</span></p>
+            <textarea id="qn" name="qn" rows="5" cols="50" required></textarea>
+        <br>
+        <input id="submit" type="submit" name="submit">
+    </form>
 </body>
 </html>
