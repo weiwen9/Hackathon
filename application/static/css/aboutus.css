@@ -7,6 +7,10 @@
     src: url(../fonts/UniversLightCondensed.ttf);
 }
 
+span {
+    color: red;
+}
+
 * {
     margin:0px;
     font-family: 'Helvetica Neue';
