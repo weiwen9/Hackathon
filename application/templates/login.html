@@ -12,10 +12,10 @@
 <body>
     <div class="signin-wrapper">
         {% if wrong_password %} 
-                <div id="popup">Your email or password is incorrect</div>>
+                <div id="popup"><h2>Your email or password is incorrect</h2></div>
         {% endif %}
         {% if success %}
-                <div id="popup">{{ success }}</div>
+            <div id="popup"><h2>Your account has been created!</h2></div>
         {% endif %}
         <div id="bgimage"></div>
         <div class="sign-panels">
