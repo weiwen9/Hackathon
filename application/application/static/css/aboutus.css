@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url(../fonts/Helvetica\ Neue\ 67\ Medium\ Condensed.otf) format('truetype');
+}
+@font-face {
+    font-family: 'Univers';
+    src: url(../fonts/UniversLightCondensed.ttf);
+}
+
+span {
+    color: red;
+}
+
+* {
+    margin:0px;
+    font-family: 'Helvetica Neue';
+}
+
+html {
+    background-color: white;
+    text-align: center;
+}
+  
+#details {
+    margin-bottom: 5px;
+    position: relative; right: 135px;
+}
+  
+#details3 {
+    margin-bottom: 5px;
+    position: relative; right: 105px; top: 13px;
+}
+  
+#fname {
+    margin-right: 25px;
+    padding: 8px;
+}
+  
+#lname {
+    padding: 8px;
+}
+  
+#email {
+    padding: 8px;
+    position: relative; top: 3px;
+}
+  
+#details2 {
+    position: relative; bottom: 0px; right: 138px;
+}
+  
+#qn {
+    margin-bottom: 15px;
+    padding: 8px;
+    position: relative; right: 3px; top: 13px;
+}
+  
+#submit {
+    background: gray;
+    color: white;
+    border-style: outset;
+    border-color: #d3d3d3 ;
+    height: 40px;
+    width: 80px;
+    font: bold 13px Helvetica;
+    position: relative; top: 20px;
+}

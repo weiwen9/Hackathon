@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="icon" href="../static/media/webicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="../static/css/form.css">
+</head>
+<body>
+    <div class="signin-wrapper">
+        <div class="sign-panels">
+            <div class="left-side">
+                <img src="../static/media/logoblack.png">
+            </div>
+            <div class="right-side">
+                <div class="signin-title">
+                    <span>SIGN UP</span>
+                    <p>Create a new account.</p>
+                </div>
+
+                <form method="post" action="">
+                    {{ form.csrf_token }}
+                    <div class="form-floating">
+                        <label for="floatingUsername">Username</label>
+                        {{ form.username }}
+                    </div>
+
+                    {% if form.username.errors %}
+                        {% for error in form.username.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    {% endif %}
+
+                    <div class="form-floating">
+                        <label for="floatingEmail">Email</label>
+                        {{ form.email }}
+                    </div>
+
+                    {% if form.email.errors %}
+                        {% for error in form.email.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    {% endif %}
+
+                    <div class="form-floating">
+                        <label for="floatingPassword">Password</label>
+                        {{ form.password }}
+                    </div>
+
+                    {% if form.password.errors %}
+                        {% for error in form.password.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    {% endif %}
+
+                    <div class="form-floating">
+                        <label for="floatingRPassword">Repeat Password</label>
+                        {{ form.password2 }}
+                    </div>
+
+                    {% if form.password2.errors %}
+                        {% for error in form.password2.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    {% endif %}
+
+                    <input type="checkbox" id="signin-checkbox">
+                    <button type="submit" href="#" class="btn-signin">Sign Up</button>
+                    <a href="login.html" class="btn-login btn-fade">Already have an account? Click here to login!</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
